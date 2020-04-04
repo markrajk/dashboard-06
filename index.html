@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard | Teams | Average charts</title>
+    <title>Dashboard | Teams | Main View</title>
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" integrity="sha256-h20CPZ0QyXlBuAw7A+KluUYx/3pK+c7lYEpqLTlxjYQ=" crossorigin="anonymous" />
     <link rel="stylesheet" href="./public/css/bootstrap.css">
@@ -17,7 +17,7 @@
         <!-- sidebar -->
         <div class="sidebar">
             <div class="sidebar-menu-toggle">
-                <i class="icon-c-chevron-l"></i>
+                <i class="icon-chevron-left"></i>
             </div>
             <div class="sidebar-main">
                 <ul class="sidebar-main-top">
@@ -29,13 +29,13 @@
                     </li>
                     <li class="sidebar-main-item active">
                         <a href="#" class="sidebar-main-link sidebar-main-link-icon">
-                            <i class="icon-c-people"></i>
+                            <i class="icon-users"></i>
                         </a>
                     </li>
                     
                     <li class="sidebar-main-item">
                         <a href="#" class="sidebar-main-link sidebar-main-link-icon">
-                            <i class="icon-c-phone"></i>
+                            <i class="icon-phone"></i>
                         </a>
                     </li>
                 </ul>
@@ -43,12 +43,12 @@
                 <ul class="sidebar-main-bottom">
                     <li class="sidebar-main-item">
                         <a href="#" class="sidebar-main-link sidebar-main-link-icon">
-                            <i class="icon-c-settings"></i>
+                            <i class="icon-settings"></i>
                         </a>
                     </li>
                     <li class="sidebar-main-item">
                         <a href="#" class="sidebar-main-link sidebar-main-link-icon">
-                            <i class="icon-c-exit"></i>
+                            <i class="icon-exit"></i>
                         </a>
                     </li>
                     <li class="sidebar-main-item logo">
@@ -62,12 +62,12 @@
             <div class="sidebar-menu">
                 <div class="sidebar-menu-header">
                     <h2>Teams</h2>
-                    <a href="#">
-                        <i class="icon-c-plus-c"></i>
+                    <a href="#" data-toggle="modal" data-target="#createNewTeamModal">
+                        <i class="icon-plus-circle"></i>
                     </a>
                 </div>
                 <div class="input-container">
-                    <i class="icon-c-search"></i>
+                    <i class="icon-search"></i>
                     <input type="text" placeholder="Search...">
                 </div>
                 <ul class="sidebar-menu-list">
@@ -100,13 +100,37 @@
                 <div class="header-top">
                     <h1 class="header-top-title text-truncate">Team Marketing</h1>
                     <div class="input-container">
-                        <i class="icon-c-search"></i>
+                        <i class="icon-search"></i>
                         <input type="text" placeholder="Search...">
                     </div>
 
-                    <i class="far fa-bell bell"></i>
+                    <i class="icon-bell bell"></i>
 
-                    <img class="face" src="./public/img/facex2.png" alt="#">
+                    <div class="dropdown-custom">
+                        <a href="#" class="dropdown-custom-trigger">
+                            <img class="face" src="./public/img/facex2.png" alt="#">
+                        </a>
+                        <ul class="dropdown-custom-list">
+                            <li class="dropdown-custom-list-header">
+                                <img src="./public/img/p-06.png" alt="#">
+                                <div class="user-info">
+                                    <p class="user-info-name">Peter Jöback</p>
+                                    <a href="#">Change photo</a>
+                                </div>
+                            </li>
+                            <li class="dropdown-custom-list-item">
+                                <a href="#" class="dropdown-custom-list-item-link">Settings</a>
+                            </li>
+
+                            <li class="dropdown-custom-list-item">
+                                <a href="#" class="dropdown-custom-list-item-link">Install</a>
+                            </li>
+
+                            <li class="dropdown-custom-list-footer">
+                                <a href="./sign-in/index.html">Sign out</a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
                 <p class="header-small text-truncate">
                     We make great ads, campaigns and create a super brand.
@@ -114,19 +138,23 @@
                 <div class="header-bottom">
                     <div class="choose">
                         <a href="./teams-average-charts/index.html" class="active">
-                            <span>Average</span> charts
+                            Charts
+                        </a>
+
+                        <a href="./teams-comments/index.html">
+                            Comments
                         </a>
 
                         <a href="./teams-members/index.html">
-                            <span>Team</span> members
+                            Members
                         </a>
 
                         <a href="./teams-settings-general/index.html">
-                            <span>Team</span> Settings
+                            Settings
                         </a>
 
                         <a href="./teams-settings-general/index.html">
-                            Export <span>Reports</span>
+                            Reports
                         </a>
                     </div>
                 </div>
@@ -147,7 +175,7 @@
                                 <div class="progress-custom-info">
                                     <h3>Great</h3>
                                     <p class="up text-truncate">
-                                        <i class="fas fa-arrow-up"></i>
+                                       <i class="icon-arrow-circle-up"></i>
                                         20% improvement
                                     </p>
                                 </div>
@@ -161,7 +189,7 @@
                                 <div class="progress-custom-info">
                                     <h3>Great</h3>
                                     <p class="up text-truncate">
-                                        <i class="fas fa-arrow-up"></i>
+                                       <i class="icon-arrow-circle-up"></i>
                                         20% improvement
                                     </p>
                                 </div>
@@ -175,7 +203,7 @@
                                 <div class="progress-custom-info">
                                     <h3>Ok</h3>
                                     <p class="down text-truncate">
-                                        <i class="fas fa-arrow-down"></i>
+                                        <i class="icon-arrow-circle-down"></i>
                                         20% break down
                                     </p>
                                 </div>
@@ -189,7 +217,7 @@
                                 <div class="progress-custom-info">
                                     <h3>Great</h3>
                                     <p class="up text-truncate">
-                                        <i class="fas fa-arrow-up"></i>
+                                       <i class="icon-arrow-circle-up"></i>
                                         20% improvement
                                     </p>
                                 </div>
@@ -203,7 +231,7 @@
                                 <div class="progress-custom-info">
                                     <h3>Great</h3>
                                     <p class="up text-truncate">
-                                        <i class="fas fa-arrow-up"></i>
+                                       <i class="icon-arrow-circle-up"></i>
                                         20% improvement
                                     </p>
                                 </div>
@@ -217,7 +245,7 @@
                                 <div class="progress-custom-info">
                                     <h3>Ok</h3>
                                     <p class="down text-truncate">
-                                        <i class="fas fa-arrow-down"></i>
+                                        <i class="icon-arrow-circle-down"></i>
                                         20% break down
                                     </p>
                                 </div>
@@ -234,7 +262,7 @@
                             <div class="dropdown-custom">
                                 <a href="#" class="dropdown-custom-trigger">
                                     Months
-                                    <i class="fas fa-caret-down"></i>
+                                    <i class="icon-caret-down"></i>
                                 </a>
                                 <ul class="dropdown-custom-list">
                                     <li class="dropdown-custom-list-item">
@@ -630,6 +658,54 @@
                         </div>
                     </section>
 
+                </div>
+
+                <!-- Modal -->
+                <div class="modal fade" id="createNewTeamModal" tabindex="-1" role="dialog" aria-labelledby="createNewTeamModalTitle" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                        <h5 class="modal-title" id="createNewTeamModalTitle">Create a new team</h5>
+                        <!-- <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <i class="icon-close"></i>
+                        </button> -->
+                        <i class="icon-bell bell"></i>
+                        <img class="face" src="./public/img/facex2.png" alt="#">
+                        </div>
+                        <div class="modal-body">
+                            <div class="input-container name">
+                                <label for="name">Name of team</label>
+                                <input type="text" id="name" name="name" placeholder="Enter here...">
+                            </div>
+
+                            <div class="double-input">
+                                <div class="input-container description">
+                                    <label for="desc">Team description</label>
+                                    <input type="text" id="desc" name="desc" placeholder="Enter here...">
+                                </div>
+
+                                <div class="input-container lead">
+                                    <label for="lead">Team lead <span>&#x1F6C8;</span></label>
+                                    
+                                    <select name="lead" id="lead">
+                                        <option value="value01" selected>Me</option>
+                                        <option value="value02">Option I</option>
+                                        <option value="value03">Option II</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="input-container member">
+                                <label for="member">Team members</label>
+                                <input type="text" id="member" name="member" placeholder="Enter name or email">
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <a href="#" class="btn-custom-primary">Create team</a>
+                            <a href="#" class="btn-custom-primary outline" data-dismiss="modal">Cancel</a>
+                        </div>
+                    </div>
+                    </div>
                 </div>
             </main>
         </div>
