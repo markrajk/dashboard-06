@@ -17,7 +17,7 @@
         <!-- sidebar -->
         <div class="sidebar">
             <div class="sidebar-menu-toggle">
-                <i class="icon-c-chevron-l"></i>
+                <i class="icon-chevron-left"></i>
             </div>
             <div class="sidebar-main">
                 <ul class="sidebar-main-top">
@@ -29,13 +29,13 @@
                     </li>
                     <li class="sidebar-main-item active">
                         <a href="#" class="sidebar-main-link sidebar-main-link-icon">
-                            <i class="icon-c-people"></i>
+                            <i class="icon-users"></i>
                         </a>
                     </li>
                     
                     <li class="sidebar-main-item">
                         <a href="#" class="sidebar-main-link sidebar-main-link-icon">
-                            <i class="icon-c-phone"></i>
+                            <i class="icon-phone"></i>
                         </a>
                     </li>
                 </ul>
@@ -43,12 +43,12 @@
                 <ul class="sidebar-main-bottom">
                     <li class="sidebar-main-item">
                         <a href="#" class="sidebar-main-link sidebar-main-link-icon">
-                            <i class="icon-c-settings"></i>
+                            <i class="icon-settings"></i>
                         </a>
                     </li>
                     <li class="sidebar-main-item">
                         <a href="#" class="sidebar-main-link sidebar-main-link-icon">
-                            <i class="icon-c-exit"></i>
+                            <i class="icon-exit"></i>
                         </a>
                     </li>
                     <li class="sidebar-main-item logo">
@@ -62,12 +62,12 @@
             <div class="sidebar-menu">
                 <div class="sidebar-menu-header">
                     <h2>Teams</h2>
-                    <a href="#">
-                        <i class="icon-c-plus-c"></i>
+                    <a href="#" data-toggle="modal" data-target="#createNewTeamModal">
+                        <i class="icon-plus-circle"></i>
                     </a>
                 </div>
                 <div class="input-container">
-                    <i class="icon-c-search"></i>
+                    <i class="icon-search"></i>
                     <input type="text" placeholder="Search...">
                 </div>
                 <ul class="sidebar-menu-list">
@@ -100,13 +100,37 @@
                 <div class="header-top">
                     <h1 class="header-top-title text-truncate">Team Marketing</h1>
                     <div class="input-container">
-                        <i class="icon-c-search"></i>
+                        <i class="icon-search"></i>
                         <input type="text" placeholder="Search...">
                     </div>
 
-                    <i class="far fa-bell bell"></i>
+                    <i class="icon-bell bell"></i>
 
-                    <img class="face" src="../public/img/facex2.png" alt="#">
+                    <div class="dropdown-custom">
+                        <a href="#" class="dropdown-custom-trigger">
+                            <img class="face" src="../public/img/facex2.png" alt="#">
+                        </a>
+                        <ul class="dropdown-custom-list">
+                            <li class="dropdown-custom-list-header">
+                                <img src="../public/img/p-06.png" alt="#">
+                                <div class="user-info">
+                                    <p class="user-info-name">Peter Jöback</p>
+                                    <a href="#">Change photo</a>
+                                </div>
+                            </li>
+                            <li class="dropdown-custom-list-item">
+                                <a href="#" class="dropdown-custom-list-item-link">Settings</a>
+                            </li>
+
+                            <li class="dropdown-custom-list-item">
+                                <a href="#" class="dropdown-custom-list-item-link">Install</a>
+                            </li>
+
+                            <li class="dropdown-custom-list-footer">
+                                <a href="../sign-in/index.html">Sign out</a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
                 <p class="header-small text-truncate">
                     We make great ads, campaigns and create a super brand.
@@ -114,19 +138,23 @@
                 <div class="header-bottom">
                     <div class="choose">
                         <a href="../teams-average-charts/index.html">
-                            <span>Average</span> charts
+                            Charts
                         </a>
 
-                        <a href="../teams-members/index.html" class="active">
-                            <span>Team</span> members
+                        <a href="../teams-comments/index.html">
+                            Comments
+                        </a>
+
+                        <a href="../teams-members/index.html"  class="active">
+                            Members
                         </a>
 
                         <a href="../teams-settings-general/index.html">
-                            <span>Team</span> Settings
+                            Settings
                         </a>
 
                         <a href="./teams-settings-general/index.html">
-                            Export <span>Reports</span>
+                            Reports
                         </a>
                     </div>
                 </div>
@@ -136,11 +164,15 @@
             <main class="single-user">
                 <div class= "single-user-header">
                     <div class="single-user-header-info">
-                        <img src="../public/img/user-placeholder.png" alt="User's profile image">
+                        <img src="../public/img/p-05.png" alt="User's profile image">
                         <p class="name text-truncate">Juulia Martinez <span class="email">jjulia.martinez@gmail.com</span></p>
                     </div>
 
-                    <a class="export-pdf" href="#">Export PDF</a>
+                    <div class="single-user-header-info-buttons">
+                        <a href="../single-user/index.html" class="btn-custom-primary">Average charts</a>
+                        <a href="../single-user-feedback/index.html" class="btn-custom-primary outline">Received feedback</a>
+                        <a href="../single-user-rights/index.html" class="btn-custom-primary outline">Given feedback</a>
+                    </div>
                 </div>
                
                 <div class="single-user-body">
@@ -155,7 +187,7 @@
                                 <div class="progress-custom-info">
                                     <h3>Great</h3>
                                     <p class="up text-truncate">
-                                        <i class="fas fa-arrow-up"></i>
+                                        <i class="icon-arrow-circle-up"></i>
                                         20% improvement
                                     </p>
                                 </div>
@@ -169,7 +201,7 @@
                                 <div class="progress-custom-info">
                                     <h3>Great</h3>
                                     <p class="up text-truncate">
-                                        <i class="fas fa-arrow-up"></i>
+                                        <i class="icon-arrow-circle-up"></i>
                                         20% improvement
                                     </p>
                                 </div>
@@ -183,7 +215,7 @@
                                 <div class="progress-custom-info">
                                     <h3>Ok</h3>
                                     <p class="down text-truncate">
-                                        <i class="fas fa-arrow-down"></i>
+                                        <i class="icon-arrow-circle-down"></i>
                                         20% break down
                                     </p>
                                 </div>
@@ -207,7 +239,7 @@
                             <div class="dropdown-custom">
                                 <a href="#" class="dropdown-custom-trigger">
                                     Months
-                                    <i class="fas fa-caret-down"></i>
+                                    <i class="icon-caret-down"></i>
                                 </a>
                                 <ul class="dropdown-custom-list">
                                     <li class="dropdown-custom-list-item">
@@ -417,318 +449,62 @@
                         </div>
 
                         <div class="slider-trigger slider-trigger-left">
-                            <i class="fas fa-chevron-left"></i>
+                            <i class="icon-chevron-left"></i>
                         </div>
 
                         <div class="slider-trigger slider-trigger-right">
-                            <i class="fas fa-chevron-right"></i>
+                            <i class="icon-chevron-right"></i>
                         </div>
                     </section>
 
-                    <section class="section section-comments">
-                        <div class="section-header">
-                            <p>Latest comments</p>
-                            <div class="dropdown-custom">
-                                <a href="#" class="dropdown-custom-trigger">
-                                    All comments
-                                    <i class="fas fa-caret-down"></i>
-                                </a>
-                                <ul class="dropdown-custom-list">
-                                    <li class="dropdown-custom-list-item">
-                                        <a href="#" class="dropdown-custom-list-item-link">Option 1</a>
-                                    </li>
+                </div>
 
-                                    <li class="dropdown-custom-list-item">
-                                        <a href="#" class="dropdown-custom-list-item-link">Option 2</a>
-                                    </li>
+                <!-- Modal -->
+                <div class="modal fade" id="createNewTeamModal" tabindex="-1" role="dialog" aria-labelledby="createNewTeamModalTitle" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                        <h5 class="modal-title" id="createNewTeamModalTitle">Create a new team</h5>
+                        <!-- <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <i class="icon-close"></i>
+                        </button> -->
+                        <i class="icon-bell bell"></i>
+                        <img class="face" src="../public/img/facex2.png" alt="#">
+                        </div>
+                        <div class="modal-body">
+                            <div class="input-container name">
+                                <label for="name">Name of team</label>
+                                <input type="text" id="name" name="name" placeholder="Enter here...">
+                            </div>
 
-                                    <li class="dropdown-custom-list-item">
-                                        <a href="#" class="dropdown-custom-list-item-link">Option 3</a>
-                                    </li>
+                            <div class="double-input">
+                                <div class="input-container description">
+                                    <label for="desc">Team description</label>
+                                    <input type="text" id="desc" name="desc" placeholder="Enter here...">
+                                </div>
 
-                                    <li class="dropdown-custom-list-item">
-                                        <a href="#" class="dropdown-custom-list-item-link">Option 4</a>
-                                    </li>
-                                </ul>
+                                <div class="input-container lead">
+                                    <label for="lead">Team lead <span>&#x1F6C8;</span></label>
+                                    
+                                    <select name="lead" id="lead">
+                                        <option value="value01" selected>Me</option>
+                                        <option value="value02">Option I</option>
+                                        <option value="value03">Option II</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="input-container member">
+                                <label for="member">Team members</label>
+                                <input type="text" id="member" name="member" placeholder="Enter name or email">
                             </div>
                         </div>
-                        <div class="section-body">
-
-                            <div class="comment-container text-truncate">
-                                <img src="../public/img/user-placeholder.png" alt="User's profile image">
-                                <div class="comment text-truncate">
-                                    <div class="comment-header">
-                                        <p class="name text-truncate">Suzie Hunyh</p>
-                                        <p class="when">Just now</p>
-                                    </div>
-                                    <p class="comment-text text-truncate">Please clearer instructions.</p>
-                                </div>
-                            </div>
-
-                            <div class="comment-container text-truncate">
-                                <img src="../public/img/user-placeholder.png" alt="User's profile image">
-                                <div class="comment text-truncate">
-                                    <div class="comment-header">
-                                        <p class="name text-truncate">Suzie Hunyh</p>
-                                        <p class="when">Just now</p>
-                                    </div>
-                                    <p class="comment-text text-truncate">Please clearer instructions.</p>
-                                </div>
-                            </div>
-
-                            <div class="comment-container text-truncate">
-                                <img src="../public/img/user-placeholder.png" alt="User's profile image">
-                                <div class="comment text-truncate">
-                                    <div class="comment-header">
-                                        <p class="name text-truncate">Suzie Hunyh</p>
-                                        <p class="when">Just now</p>
-                                    </div>
-                                    <p class="comment-text text-truncate">Please clearer instructions.</p>
-                                </div>
-                            </div>
-
-                            
-
-                            <div class="comment-container text-truncate">
-                                <img src="../public/img/user-placeholder.png" alt="User's profile image">
-                                <div class="comment text-truncate">
-                                    <div class="comment-header">
-                                        <p class="name text-truncate">Ellen Schromberh</p>
-                                        <p class="when">Just now</p>
-                                    </div>
-                                    <p class="comment-text text-truncate">More realistic goals.</p>
-                                </div>
-                            </div>
-
-                            <div class="comment-container text-truncate">
-                                <img src="../public/img/user-placeholder.png" alt="User's profile image">
-                                <div class="comment text-truncate">
-                                    <div class="comment-header">
-                                        <p class="name text-truncate">Ellen Schromberh</p>
-                                        <p class="when">Just now</p>
-                                    </div>
-                                    <p class="comment-text text-truncate">More realistic goals.</p>
-                                </div>
-                            </div>
-
-                            <div class="comment-container text-truncate">
-                                <img src="../public/img/user-placeholder.png" alt="User's profile image">
-                                <div class="comment text-truncate">
-                                    <div class="comment-header">
-                                        <p class="name text-truncate">Ellen Schromberh</p>
-                                        <p class="when">Just now</p>
-                                    </div>
-                                    <p class="comment-text text-truncate">More realistic goals.</p>
-                                </div>
-                            </div>
-
-                            <div class="comment-container text-truncate">
-                                <img src="../public/img/user-placeholder.png" alt="User's profile image">
-                                <div class="comment text-truncate">
-                                    <div class="comment-header">
-                                        <p class="name text-truncate">Suzie Hunyh</p>
-                                        <p class="when">Just now</p>
-                                    </div>
-                                    <p class="comment-text text-truncate">Please clearer instructions.</p>
-                                </div>
-                            </div>
-
-                            <div class="comment-container text-truncate">
-                                <img src="../public/img/user-placeholder.png" alt="User's profile image">
-                                <div class="comment text-truncate">
-                                    <div class="comment-header">
-                                        <p class="name text-truncate">Suzie Hunyh</p>
-                                        <p class="when">Just now</p>
-                                    </div>
-                                    <p class="comment-text text-truncate">Please clearer instructions.</p>
-                                </div>
-                            </div>
-
-                            <div class="comment-container text-truncate">
-                                <img src="../public/img/user-placeholder.png" alt="User's profile image">
-                                <div class="comment text-truncate">
-                                    <div class="comment-header">
-                                        <p class="name text-truncate">Suzie Hunyh</p>
-                                        <p class="when">Just now</p>
-                                    </div>
-                                    <p class="comment-text text-truncate">Please clearer instructions.</p>
-                                </div>
-                            </div>
-
-                            
-
-                            <div class="comment-container text-truncate">
-                                <img src="../public/img/user-placeholder.png" alt="User's profile image">
-                                <div class="comment text-truncate">
-                                    <div class="comment-header">
-                                        <p class="name text-truncate">Ellen Schromberh</p>
-                                        <p class="when">Just now</p>
-                                    </div>
-                                    <p class="comment-text text-truncate">More realistic goals.</p>
-                                </div>
-                            </div>
-
-                            <div class="comment-container text-truncate">
-                                <img src="../public/img/user-placeholder.png" alt="User's profile image">
-                                <div class="comment text-truncate">
-                                    <div class="comment-header">
-                                        <p class="name text-truncate">Ellen Schromberh</p>
-                                        <p class="when">Just now</p>
-                                    </div>
-                                    <p class="comment-text text-truncate">More realistic goals.</p>
-                                </div>
-                            </div>
-
-                            <div class="comment-container text-truncate">
-                                <img src="../public/img/user-placeholder.png" alt="User's profile image">
-                                <div class="comment text-truncate">
-                                    <div class="comment-header">
-                                        <p class="name text-truncate">Ellen Schromberh</p>
-                                        <p class="when">Just now</p>
-                                    </div>
-                                    <p class="comment-text text-truncate">More realistic goals.</p>
-                                </div>
-                            </div>
-
-                            <div class="comment-container text-truncate">
-                                <img src="../public/img/user-placeholder.png" alt="User's profile image">
-                                <div class="comment text-truncate">
-                                    <div class="comment-header">
-                                        <p class="name text-truncate">Suzie Hunyh</p>
-                                        <p class="when">Just now</p>
-                                    </div>
-                                    <p class="comment-text text-truncate">Please clearer instructions.</p>
-                                </div>
-                            </div>
-
-                            <div class="comment-container text-truncate">
-                                <img src="../public/img/user-placeholder.png" alt="User's profile image">
-                                <div class="comment text-truncate">
-                                    <div class="comment-header">
-                                        <p class="name text-truncate">Suzie Hunyh</p>
-                                        <p class="when">Just now</p>
-                                    </div>
-                                    <p class="comment-text text-truncate">Please clearer instructions.</p>
-                                </div>
-                            </div>
-
-                            <div class="comment-container text-truncate">
-                                <img src="../public/img/user-placeholder.png" alt="User's profile image">
-                                <div class="comment text-truncate">
-                                    <div class="comment-header">
-                                        <p class="name text-truncate">Suzie Hunyh</p>
-                                        <p class="when">Just now</p>
-                                    </div>
-                                    <p class="comment-text text-truncate">Please clearer instructions.</p>
-                                </div>
-                            </div>
-
-                            
-
-                            <div class="comment-container text-truncate">
-                                <img src="../public/img/user-placeholder.png" alt="User's profile image">
-                                <div class="comment text-truncate">
-                                    <div class="comment-header">
-                                        <p class="name text-truncate">Ellen Schromberh</p>
-                                        <p class="when">Just now</p>
-                                    </div>
-                                    <p class="comment-text text-truncate">More realistic goals.</p>
-                                </div>
-                            </div>
-
-                            <div class="comment-container text-truncate">
-                                <img src="../public/img/user-placeholder.png" alt="User's profile image">
-                                <div class="comment text-truncate">
-                                    <div class="comment-header">
-                                        <p class="name text-truncate">Ellen Schromberh</p>
-                                        <p class="when">Just now</p>
-                                    </div>
-                                    <p class="comment-text text-truncate">More realistic goals.</p>
-                                </div>
-                            </div>
-
-                            <div class="comment-container text-truncate">
-                                <img src="../public/img/user-placeholder.png" alt="User's profile image">
-                                <div class="comment text-truncate">
-                                    <div class="comment-header">
-                                        <p class="name text-truncate">Ellen Schromberh</p>
-                                        <p class="when">Just now</p>
-                                    </div>
-                                    <p class="comment-text text-truncate">More realistic goals.</p>
-                                </div>
-                            </div>
-
-                            <div class="comment-container text-truncate">
-                                <img src="../public/img/user-placeholder.png" alt="User's profile image">
-                                <div class="comment text-truncate">
-                                    <div class="comment-header">
-                                        <p class="name text-truncate">Suzie Hunyh</p>
-                                        <p class="when">Just now</p>
-                                    </div>
-                                    <p class="comment-text text-truncate">Please clearer instructions.</p>
-                                </div>
-                            </div>
-
-                            <div class="comment-container text-truncate">
-                                <img src="../public/img/user-placeholder.png" alt="User's profile image">
-                                <div class="comment text-truncate">
-                                    <div class="comment-header">
-                                        <p class="name text-truncate">Suzie Hunyh</p>
-                                        <p class="when">Just now</p>
-                                    </div>
-                                    <p class="comment-text text-truncate">Please clearer instructions.</p>
-                                </div>
-                            </div>
-
-                            <div class="comment-container text-truncate">
-                                <img src="../public/img/user-placeholder.png" alt="User's profile image">
-                                <div class="comment text-truncate">
-                                    <div class="comment-header">
-                                        <p class="name text-truncate">Suzie Hunyh</p>
-                                        <p class="when">Just now</p>
-                                    </div>
-                                    <p class="comment-text text-truncate">Please clearer instructions.</p>
-                                </div>
-                            </div>
-
-                            
-
-                            <div class="comment-container text-truncate">
-                                <img src="../public/img/user-placeholder.png" alt="User's profile image">
-                                <div class="comment text-truncate">
-                                    <div class="comment-header">
-                                        <p class="name text-truncate">Ellen Schromberh</p>
-                                        <p class="when">Just now</p>
-                                    </div>
-                                    <p class="comment-text text-truncate">More realistic goals.</p>
-                                </div>
-                            </div>
-
-                            <div class="comment-container text-truncate">
-                                <img src="../public/img/user-placeholder.png" alt="User's profile image">
-                                <div class="comment text-truncate">
-                                    <div class="comment-header">
-                                        <p class="name text-truncate">Ellen Schromberh</p>
-                                        <p class="when">Just now</p>
-                                    </div>
-                                    <p class="comment-text text-truncate">More realistic goals.</p>
-                                </div>
-                            </div>
-
-                            <div class="comment-container text-truncate">
-                                <img src="../public/img/user-placeholder.png" alt="User's profile image">
-                                <div class="comment text-truncate">
-                                    <div class="comment-header">
-                                        <p class="name text-truncate">Ellen Schromberh</p>
-                                        <p class="when">Just now</p>
-                                    </div>
-                                    <p class="comment-text text-truncate">More realistic goals.</p>
-                                </div>
-                            </div>
-
+                        <div class="modal-footer">
+                            <a href="#" class="btn-custom-primary">Create team</a>
+                            <a href="#" class="btn-custom-primary outline" data-dismiss="modal">Cancel</a>
                         </div>
-                    </section>
-
+                    </div>
+                    </div>
                 </div>
             </main>
         </div>
