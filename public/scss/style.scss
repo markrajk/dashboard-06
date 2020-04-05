@@ -1060,6 +1060,7 @@ i {
 
 // CUSTOM TABLE
 .table-custom {
+  width: 100%important;
   display: block;
   border-spacing: 0;
   border-collapse: separate;
@@ -1721,14 +1722,14 @@ i {
     }
   }
 
-  & .table {
-    display: none;
-    max-width: 72rem;
+  // & .table {
+  //   display: none;
+  //   max-width: 72rem;
 
-    @include respond(desktop-md) {
-      max-width: 100%;
-    }
-  }
+  //   @include respond(desktop-md) {
+  //     max-width: 100%;
+  //   }
+  // }
 }
 // ==================================
 // TEAM CHARTS END

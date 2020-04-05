@@ -498,6 +498,7 @@ i {
       border-color: #bbbbbb; }
 
 .table-custom {
+  width: 100% important;
   display: block;
   border-spacing: 0;
   border-collapse: separate; }
@@ -919,12 +920,6 @@ i {
       @media (max-width: 379px) {
         .teams-main-view .graph-card-body .bar:first-of-type + .bar, .teams-main-view .graph-card-body .bar:first-of-type + .bar + .bar {
           display: none; } }
-  .teams-main-view .table {
-    display: none;
-    max-width: 72rem; }
-    @media (max-width: 991px) {
-      .teams-main-view .table {
-        max-width: 100%; } }
 
 .teams-comments {
   padding: 2.5rem 0;
