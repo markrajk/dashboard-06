@@ -1227,15 +1227,6 @@ i {
         outline: none; }
         .teams-people-view #inviteNewModal .modal-body .input-container input::placeholder {
           color: #a0a0a0; }
-    .teams-people-view #inviteNewModal .modal-body .btn-custom-primary {
-      margin-top: 3.7rem;
-      font-size: 1.6rem;
-      font-weight: 500;
-      line-height: 1.31;
-      color: #ffffff;
-      border-radius: 1.8rem;
-      background-color: #1a9cfc;
-      border: 0; }
   .teams-people-view #inviteNewModal .modal-footer {
     padding: 0 2.2rem;
     padding-bottom: 4rem;
@@ -1249,6 +1240,7 @@ i {
       line-height: 1.36;
       color: #ffffff; }
       .teams-people-view #inviteNewModal .modal-footer .btn-custom-primary.outline {
+        margin-left: 1.5rem;
         font-weight: 500;
         color: #48525d;
         border-color: #bbbbbb; }

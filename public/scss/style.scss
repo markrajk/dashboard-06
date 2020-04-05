@@ -2188,17 +2188,6 @@ i {
           }
         }
       }
-
-      & .btn-custom-primary {
-        margin-top: 3.7rem;
-        font-size: 1.6rem;
-        font-weight: 500;
-        line-height: 1.31;
-        color: #ffffff;
-        border-radius: 1.8rem;
-        background-color: #1a9cfc;
-        border: 0;
-      }
     }
 
     &-footer {
@@ -2216,6 +2205,7 @@ i {
         color: #ffffff;
 
         &.outline {
+          margin-left: 1.5rem;
           font-weight: 500;
           color: #48525d;
           border-color: #bbbbbb;
