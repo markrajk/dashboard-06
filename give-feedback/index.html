@@ -86,7 +86,7 @@
                     </li>
                 </ul>
                 <div class="sidebar-menu-footer">
-                    <a href="#" class="sidebar-menu-footer-create-new">Create a new team</a>
+                    <a href="#" class="sidebar-menu-footer-create-new"  data-toggle="modal" data-target="#createNewTeamModal">Create a new team</a>
                     <a href="#" class="btn-custom-white">
                         Get the mobile app
                         <img src="../public/img/play-big.png" alt="google play store icon" class="play-icon">
@@ -341,7 +341,7 @@
                 </div>
 
 
-                <!-- Modal -->
+                <!-- Feedback Modal -->
                 <div class="modal fade" id="feedbackModal" tabindex="-1" role="dialog" aria-labelledby="feedbackModalLabel" aria-hidden="true">
                     <div class="modal-dialog modal-dialog-centered" role="document">
                     <div class="modal-content">
@@ -406,6 +406,54 @@
                             </div>
 
                             <a href="#" class="btn-custom-primary">Send feedback</a>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+
+                <!-- Create New Team Modal -->
+                <div class="modal fade" id="createNewTeamModal" tabindex="-1" role="dialog" aria-labelledby="createNewTeamModalTitle" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                        <h5 class="modal-title" id="createNewTeamModalTitle">Create a new team</h5>
+                        <!-- <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <i class="icon-close"></i>
+                        </button> -->
+                        <i class="icon-bell bell"></i>
+                        <img class="face" src="../public/img/facex2.png" alt="#">
+                        </div>
+                        <div class="modal-body">
+                            <div class="input-container name">
+                                <label for="name">Name of team</label>
+                                <input type="text" id="name" name="name" placeholder="Enter here...">
+                            </div>
+
+                            <div class="double-input">
+                                <div class="input-container description">
+                                    <label for="desc">Team description</label>
+                                    <input type="text" id="desc" name="desc" placeholder="Enter here...">
+                                </div>
+
+                                <div class="input-container lead">
+                                    <label for="lead">Team lead <span>&#x1F6C8;</span></label>
+                                    
+                                    <select name="lead" id="lead">
+                                        <option value="value01" selected>Me</option>
+                                        <option value="value02">Option I</option>
+                                        <option value="value03">Option II</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="input-container member">
+                                <label for="member">Team members</label>
+                                <input type="text" id="member" name="member" placeholder="Enter name or email">
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <a href="#" class="btn-custom-primary">Create team</a>
+                            <a href="#" class="btn-custom-primary outline" data-dismiss="modal">Cancel</a>
                         </div>
                     </div>
                     </div>

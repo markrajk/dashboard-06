@@ -279,90 +279,6 @@ i {
         color: rgba(23, 23, 23, 0.6);
         transform: translate(-50%, 100%); }
 
-.table {
-  margin: 0;
-  height: 100%;
-  padding: 0 3rem;
-  padding-right: 0; }
-  .table-header {
-    padding: 2.8rem 0;
-    padding-bottom: 2.2rem; }
-    .table-header h3 {
-      opacity: 0.96;
-      font-size: 2.1rem;
-      font-weight: 500;
-      line-height: 1.1;
-      letter-spacing: 0.21px;
-      color: #1c1c1c; }
-  .table-body {
-    max-height: calc(100% - 8.3rem);
-    overflow-y: scroll;
-    scrollbar-width: none;
-    /* Firefox */
-    -ms-overflow-style: none;
-    /* Internet Explorer 10+ */ }
-    .table-body::-webkit-scrollbar {
-      /* WebKit */
-      width: 0;
-      height: 0; }
-  .table-row {
-    padding: 0.65rem 0;
-    display: grid;
-    align-items: center;
-    grid-template-columns: repeat(4, 1fr) 3.2rem;
-    font-size: 1.2rem;
-    line-height: 1.33;
-    color: #354052;
-    border-bottom: 1px solid rgba(225, 225, 225, 0.56); }
-    .table-row-item-img {
-      width: 3.3rem;
-      height: 3.3rem;
-      border-radius: 50%; }
-    .table-row-item-name {
-      margin-left: 1.2rem;
-      color: #171c24;
-      font-weight: 500; }
-      .table-row-item-name:hover, .table-row-item-name:focus {
-        color: #171c24; }
-    .table-row-item .btn-custom-table {
-      margin: 0 auto; }
-    .table-row-item-arrow {
-      font-size: 2rem;
-      color: #b3bac4; }
-      .table-row-item-arrow:hover, .table-row-item-arrow:focus {
-        color: #b3bac4; }
-    .table-row-item.arrow {
-      transform: rotateZ(180deg); }
-
-.panel-body table.flex-table {
-  display: -webkit-box;
-  display: -moz-box;
-  display: -webkit-flexbox;
-  display: -ms-flexbox;
-  display: flex;
-  flex-direction: column; }
-.panel-body table.flex-table thead, .panel-body table.flex-table tbody {
-  display: block; }
-.panel-body table.flex-table tbody {
-  max-height: calc( 100vh - 14.4rem - 2.8rem - 6.9rem - 12.2rem - 6.9rem - 3rem );
-  overflow-y: auto;
-  scrollbar-width: none;
-  /* Firefox */
-  -ms-overflow-style: none;
-  /* Internet Explorer 10+ */ }
-  .panel-body table.flex-table tbody::-webkit-scrollbar {
-    /* WebKit */
-    width: 0;
-    height: 0; }
-.panel-body table.flex-table tr {
-  display: flex; }
-.panel-body table.flex-table tr td, .panel-body table.flex-table tr th {
-  white-space: nowrap;
-  display: flex;
-  flex: 1 !important;
-  align-items: center;
-  justify-content: start; }
-
 .stars {
   text-align: left;
   position: relative;
@@ -424,6 +340,8 @@ i {
     background-color: #ffffff;
     z-index: 1000;
     transition: display 1s ease-in-out; }
+    .dropdown-custom-list:focus, .dropdown-custom-list:active {
+      display: block; }
     .dropdown-custom-list-item {
       font-size: 1.5rem;
       line-height: 1.33;
@@ -1011,6 +929,7 @@ i {
 .teams-comments {
   padding: 2.5rem 0;
   padding-top: 3.45rem;
+  padding-bottom: 0;
   border-top: 1px solid #e1e1e1;
   max-width: 103rem; }
   .teams-comments .section-comments-header {
@@ -1042,7 +961,7 @@ i {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 2.6rem 2.6rem;
-    max-height: calc(100vh - 28.3rem);
+    max-height: calc(100vh - 23.95rem - .9rem - 1px);
     overflow-y: auto;
     scrollbar-width: none;
     /* Firefox */
@@ -1223,23 +1142,23 @@ i {
   .teams-people-view .panel-body .table-header-fixed td.table-header-fixed-col-4 {
     font-size: 1.3rem;
     color: #647282; }
-  .teams-people-view .modal-content {
+  .teams-people-view #inviteNewModal .modal-content {
     margin: auto;
     border-radius: .3rem; }
-  .teams-people-view .modal-dialog {
+  .teams-people-view #inviteNewModal .modal-dialog {
     padding-left: 1rem;
     padding-right: 1rem;
     max-width: 50rem; }
-  .teams-people-view .modal-header {
+  .teams-people-view #inviteNewModal .modal-header {
     padding: 2.2rem;
     display: flex;
     align-items: center;
     border: 0; }
-    .teams-people-view .modal-header h5 {
+    .teams-people-view #inviteNewModal .modal-header h5 {
       font-size: 1.8rem;
       line-height: 1.33;
       color: #3d464d; }
-      .teams-people-view .modal-header h5 .name {
+      .teams-people-view #inviteNewModal .modal-header h5 .name {
         display: block;
         font-size: 2.6rem;
         font-weight: 700;
@@ -1247,10 +1166,10 @@ i {
         letter-spacing: 0.26px;
         color: #000000;
         text-transform: capitalize; }
-    .teams-people-view .modal-header .close {
+    .teams-people-view #inviteNewModal .modal-header .close {
       font-size: 2rem;
       align-self: flex-start; }
-  .teams-people-view .modal-body {
+  .teams-people-view #inviteNewModal .modal-body {
     padding-top: 3.4rem;
     padding-bottom: 6rem;
     display: flex;
@@ -1258,16 +1177,16 @@ i {
     justify-content: center;
     align-items: center;
     background-color: #f6f9fc; }
-    .teams-people-view .modal-body .input-container {
+    .teams-people-view #inviteNewModal .modal-body .input-container {
       max-width: 43.6rem;
       width: 100%; }
-      .teams-people-view .modal-body .input-container label {
+      .teams-people-view #inviteNewModal .modal-body .input-container label {
         margin-bottom: .5rem;
         display: block;
         font-size: 1.3rem;
         line-height: 1.38;
         color: #3d464d; }
-      .teams-people-view .modal-body .input-container input {
+      .teams-people-view #inviteNewModal .modal-body .input-container input {
         padding: .9rem 1.2rem;
         width: 100%;
         font-size: 1.2rem;
@@ -1276,9 +1195,9 @@ i {
         border: solid 1px #bdc4c9;
         background-color: #ffffff;
         outline: none; }
-        .teams-people-view .modal-body .input-container input::placeholder {
+        .teams-people-view #inviteNewModal .modal-body .input-container input::placeholder {
           color: #a0a0a0; }
-    .teams-people-view .modal-body .btn-custom-primary {
+    .teams-people-view #inviteNewModal .modal-body .btn-custom-primary {
       margin-top: 3.7rem;
       font-size: 1.6rem;
       font-weight: 500;
@@ -1287,19 +1206,19 @@ i {
       border-radius: 1.8rem;
       background-color: #1a9cfc;
       border: 0; }
-  .teams-people-view .modal-footer {
+  .teams-people-view #inviteNewModal .modal-footer {
     padding: 0 2.2rem;
     padding-bottom: 4rem;
     border: 0;
     background-color: #f6f9fc; }
-    .teams-people-view .modal-footer .btn-custom-primary {
+    .teams-people-view #inviteNewModal .modal-footer .btn-custom-primary {
       padding: .7rem 1.4rem;
       border-radius: .4rem;
       font-size: 1.4rem;
       font-weight: 500;
       line-height: 1.36;
       color: #ffffff; }
-      .teams-people-view .modal-footer .btn-custom-primary.outline {
+      .teams-people-view #inviteNewModal .modal-footer .btn-custom-primary.outline {
         font-weight: 500;
         color: #48525d;
         border-color: #bbbbbb; }
@@ -1385,11 +1304,11 @@ i {
     max-height: calc(100vh - 32rem); }
     .teams-settings-feedback-body .subheader-text {
       margin-bottom: .5rem;
-      font-size: 1.5rem;
+      font-size: 1.6rem;
       line-height: 1.33;
       color: #1b2733; }
       .teams-settings-feedback-body .subheader-text-small {
-        font-size: 1.2rem;
+        font-size: 1.3rem;
         line-height: 1.75;
         color: #778391; }
     .teams-settings-feedback-body .section-caption {
@@ -1529,11 +1448,11 @@ i {
         max-width: 31.7rem; }
         .teams-settings-rights-body .section-caption-info .subheader-text {
           margin-bottom: .5rem;
-          font-size: 1.5rem;
+          font-size: 1.6rem;
           line-height: 1.33;
           color: #1b2733; }
           .teams-settings-rights-body .section-caption-info .subheader-text-small {
-            font-size: 1.2rem;
+            font-size: 1.3rem;
             line-height: 1.75;
             color: #778391; }
       .teams-settings-rights-body .section-caption a {
@@ -1689,35 +1608,35 @@ i {
           font-weight: 500;
           line-height: 1.36;
           color: #000000; }
-  .give-feedback .modal-content {
+  .give-feedback #feedbackModal .modal-content {
     margin: auto;
     border-radius: 1.7rem;
     border: 0; }
-  .give-feedback .modal-dialog {
+  .give-feedback #feedbackModal .modal-dialog {
     padding-left: 1rem;
     padding-right: 1rem;
     width: 100%;
     max-width: 73.7rem !important;
     margin: auto; }
-  .give-feedback .modal-header {
+  .give-feedback #feedbackModal .modal-header {
     padding: 2.2rem;
     display: flex;
     align-items: center;
     border-bottom: none;
     margin-bottom: 2rem; }
-    .give-feedback .modal-header img {
+    .give-feedback #feedbackModal .modal-header img {
       margin-right: 1.1rem;
       width: 5.3rem;
       height: 5.3rem;
       border-radius: 50%; }
-    .give-feedback .modal-header h5 {
+    .give-feedback #feedbackModal .modal-header h5 {
       font-size: 1.2rem;
       font-weight: 500;
       line-height: 1.22;
       letter-spacing: 0.07px;
       color: #007aff;
       text-transform: uppercase; }
-      .give-feedback .modal-header h5 .name {
+      .give-feedback #feedbackModal .modal-header h5 .name {
         margin-top: .5rem;
         display: block;
         font-size: 2.15rem;
@@ -1726,38 +1645,38 @@ i {
         letter-spacing: 0.26px;
         color: #000000;
         text-transform: capitalize; }
-    .give-feedback .modal-header .close {
+    .give-feedback #feedbackModal .modal-header .close {
       font-size: 2rem;
       align-self: flex-start; }
-  .give-feedback .modal-body {
+  .give-feedback #feedbackModal .modal-body {
     padding: 2rem;
     padding-bottom: 6rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center; }
-    .give-feedback .modal-body .rating {
+    .give-feedback #feedbackModal .modal-body .rating {
       text-align: center; }
-      .give-feedback .modal-body .rating p {
+      .give-feedback #feedbackModal .modal-body .rating p {
         margin-bottom: .5rem;
         font-size: 1.9rem;
         font-weight: 500;
         line-height: 1.32;
         color: #000000; }
-      .give-feedback .modal-body .rating:first-of-type {
+      .give-feedback #feedbackModal .modal-body .rating:first-of-type {
         margin-bottom: 3.7rem; }
-    .give-feedback .modal-body .input-container {
+    .give-feedback #feedbackModal .modal-body .input-container {
       width: 100%;
       max-width: 42rem;
       margin-top: 5rem; }
-      .give-feedback .modal-body .input-container label {
+      .give-feedback #feedbackModal .modal-body .input-container label {
         display: block;
         font-size: 1.3rem;
         font-weight: 700;
         line-height: 1.38;
         letter-spacing: 0.13px;
         color: #2d2d2d; }
-      .give-feedback .modal-body .input-container input {
+      .give-feedback #feedbackModal .modal-body .input-container input {
         width: 100%;
         padding: 1rem 0;
         padding-top: 1.5rem;
@@ -1768,12 +1687,12 @@ i {
         border-bottom: 1px solid #DFE0E2;
         outline: none;
         color: #142840; }
-        .give-feedback .modal-body .input-container input::placeholder {
+        .give-feedback #feedbackModal .modal-body .input-container input::placeholder {
           color: rgba(20, 40, 64, 0.3); }
-      .give-feedback .modal-body .input-container:nth-of-type(4) {
+      .give-feedback #feedbackModal .modal-body .input-container:nth-of-type(4) {
         color: red !important;
         margin-top: 2.7rem; }
-    .give-feedback .modal-body .btn-custom-primary {
+    .give-feedback #feedbackModal .modal-body .btn-custom-primary {
       padding: .5em 2.2em;
       margin-top: 3.2rem;
       font-size: 1.6rem;
