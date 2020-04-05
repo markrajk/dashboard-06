@@ -2057,7 +2057,7 @@ i {
           & a {
             display: flex;
             align-items: center;
-            
+
             & img {
               margin-right: 1.5rem;
               width: 4.1rem;
@@ -2076,6 +2076,10 @@ i {
                 line-height: 1.33;
                 color: #647281;
               }
+            }
+
+            &:hover .name {
+              text-decoration: underline;
             }
           }
         }

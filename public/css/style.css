@@ -1156,6 +1156,8 @@ i {
         font-size: 1.2rem;
         line-height: 1.33;
         color: #647281; }
+    .teams-people-view .panel-body .table-header-fixed-col-1 a:hover .name {
+      text-decoration: underline; }
   .teams-people-view .panel-body .table-header-fixed-col-2 {
     font-size: 1.4rem;
     line-height: 1.36;
