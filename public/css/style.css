@@ -400,7 +400,8 @@ i {
 .modal-backdrop {
   background-color: rgba(37, 56, 75, 0.32); }
 .modal-content {
-  box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.2); }
+  box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.2);
+  border: 1.25px solid #E5E5E5; }
 
 #createNewTeamModal .modal-content {
   margin: auto;
@@ -1150,12 +1151,12 @@ i {
       font-size: 1.4rem;
       line-height: 1.36;
       color: #1b2733; }
-      .teams-people-view .panel-body .table-header-fixed-col-1 a .name span {
-        margin-top: .2rem;
-        display: block;
-        font-size: 1.2rem;
-        line-height: 1.33;
-        color: #647281; }
+    .teams-people-view .panel-body .table-header-fixed-col-1 a .email {
+      margin-top: .2rem;
+      display: block;
+      font-size: 1.2rem;
+      line-height: 1.33;
+      color: #647281; }
     .teams-people-view .panel-body .table-header-fixed-col-1 a:hover .name {
       text-decoration: underline; }
   .teams-people-view .panel-body .table-header-fixed-col-2 {
@@ -1309,11 +1310,10 @@ i {
 
 .teams-settings-feedback {
   padding: 2.5rem 0;
+  padding-bottom: 0;
   padding-top: 2.6rem;
   max-width: 80.5rem;
-  max-height: calc(100vh - 16.275rem);
   border-top: 1px solid #e1e1e1;
-  border-bottom: 1px solid #e1e1e1;
   overflow-y: auto;
   scrollbar-width: none;
   /* Firefox */
@@ -1332,7 +1332,7 @@ i {
     .teams-settings-feedback .btn-custom-primary.outline:hover, .teams-settings-feedback .btn-custom-primary.outline:focus {
       background-color: #f5f5f5; }
   .teams-settings-feedback-body {
-    max-height: calc(100vh - 32rem); }
+    max-height: calc(100vh - 27.8rem - 1.5px); }
     .teams-settings-feedback-body .subheader-text {
       margin-bottom: .5rem;
       font-size: 1.6rem;
@@ -1447,11 +1447,10 @@ i {
 
 .teams-settings-rights {
   padding: 2.5rem 0;
+  padding-bottom: 0;
   padding-top: 2.6rem;
   max-width: 80.5rem;
-  max-height: calc(100vh - 16.275rem);
   border-top: 1px solid #e1e1e1;
-  border-bottom: 1px solid #e1e1e1;
   overflow-y: auto;
   scrollbar-width: none;
   /* Firefox */
@@ -1470,7 +1469,7 @@ i {
     .teams-settings-rights .btn-custom-primary.outline:hover, .teams-settings-rights .btn-custom-primary.outline:focus {
       background-color: #f5f5f5; }
   .teams-settings-rights-body {
-    max-height: calc(100vh - 32rem); }
+    max-height: calc(100vh - 26.5rem - 1.5px); }
     .teams-settings-rights-body .section-caption {
       display: flex;
       justify-content: space-between;
@@ -1637,7 +1636,7 @@ i {
           height: 7.5rem;
           border-radius: 50%; }
         .give-feedback-people-body-person p {
-          font-size: 1.1rem;
+          font-size: 1.25rem;
           font-weight: 500;
           line-height: 1.36;
           color: #000000; }
