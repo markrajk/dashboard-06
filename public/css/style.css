@@ -498,7 +498,7 @@ i {
       border-color: #bbbbbb; }
 
 .table-custom {
-  width: 100% important;
+  width: 100% !important;
   display: block;
   border-spacing: 0;
   border-collapse: separate; }
