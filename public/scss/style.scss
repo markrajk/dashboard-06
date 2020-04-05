@@ -799,7 +799,14 @@ i {
 }
 
 .modal {
-  background-color: rgba($color: #192736, $alpha: .32);
+  
+  &-backdrop {
+    background-color: rgba($color: #25384B, $alpha: .32);
+  }
+
+  &-content {
+    box-shadow: 0 5px 10px 0 rgba($color: #000000, $alpha: .2);
+  }
 }
 
 // [type="radio"]:checked,
@@ -1013,9 +1020,6 @@ i {
           }
         }
 
-        &.member {
-
-        }
       }
 
       & .double-input {
@@ -1147,6 +1151,32 @@ i {
       }
     }
 
+    &-top {
+      
+      & .sidebar-main-item {
+
+        &:nth-of-type(1) {
+          //background-color: red;
+          margin-bottom: 2.5rem;
+        }
+
+        &:nth-of-type(2)  {
+          margin-bottom: 2.5rem;
+
+          & a i {
+            font-size: 2.6rem;
+          }
+        }
+
+        &:nth-of-type(3)  {
+          & a i {
+            font-size: 2.2rem;
+          }
+          
+        }
+      }
+    }
+
     &-link {
       &-icon {
         display: flex;
@@ -1154,15 +1184,15 @@ i {
         justify-content: center;
         width: 4.5rem;
         height: 4.5rem;
-        font-size: 2rem;
+        font-size: 2.1rem;
         color: #9ba6b2;
       }
     }
 
     & .logo img {
-      margin-bottom: 0.7rem;
-      width: 3.9rem;
-      height: 3.9rem;
+      margin-bottom: 0.9rem;
+      width: 3.8rem;
+      height: 3.8rem;
     }
 
     & .letter-circle {
@@ -1205,7 +1235,7 @@ i {
       }
 
       i {
-        font-size: 2.790rem;
+        font-size: 2.8rem;
         color: #1a9cfc;
       }
     }
@@ -1283,23 +1313,23 @@ i {
         margin: 1.7rem;
 
         & .play-icon {
-          width: resize(2.6, 0.8) * 1rem;
-          height: resize(2.3, 0.8) * 1rem;
+          width: resize(7.19, 0.28) * 1rem;
+          height: resize(7.68, 0.28) * 1rem;
           margin-left: 1.2rem;
         }
 
         & .apple-icon {
-          width: resize(2, 0.85) * 1rem;
-          height: resize(2, 0.85) * 1rem;
+          width: resize(2.2, 1) * 1rem;
+          height: resize(2.2, 1) * 1rem;
           margin-bottom: 0.3rem;
           margin-left: 0.3rem;
         }
 
-        & .play-icon,
-        & .apple-icon {
-          width: 2.2rem;
-          height: 2.2rem;
-        }
+        // & .play-icon,
+        // & .apple-icon {
+        //   width: 2.2rem;
+        //   height: 2.2rem;
+        // }
       }
     }
   }
@@ -1312,9 +1342,9 @@ i {
     width: 2.8rem;
     height: 2.8rem;
     position: absolute;
-    top: 4.7rem;
+    top: 2rem;
     right: 0;
-    transform: translate(50%, -100%);
+    transform: translate(50%, 0);
     border: solid 1px #e1e1e1;
     border-radius: 50%;
     background-color: #fff;
@@ -1355,7 +1385,7 @@ i {
 
     & .input-container {
       //min-width: 20rem;
-      width: 25.6rem;
+      max-width: 25.6rem;
       margin-left: 1rem;
       position: relative;
 
@@ -1386,10 +1416,15 @@ i {
         color: #9699a6;
       }
 
-      @include respond(desktop-xxsm) {
+      @include respond(desktop-xsm) {
         margin-left: 0;
-        width: 100%;
+        width: 15rem;
       }
+
+      // @include respond(desktop-xxsm) {
+      //   margin-left: 0;
+      //   width: 10rem;
+      // }
     }
 
     & .bell {
@@ -1877,17 +1912,22 @@ i {
 .teams-people-view {
   padding:2.5rem 0;
   border-top: 1px solid #e1e1e1;
-  max-width: 88.2rem;
+  max-width: 79.9rem;
 
   &-header {
-    margin-bottom: 3.5rem;
+    margin-bottom: 3rem;
 
     @include respond(desktop-xxsm) {
       margin-bottom: 2.5rem;
     }
 
     .btn-custom-primary {
+      padding: .6rem 1.4rem;
       margin-right: 1.1rem;
+      font-size: 1.4rem;
+      font-weight: 500;
+      line-height: 1.36;
+      color: #ffffff;
 
       @include respond(desktop-xxsm) {
         font-size: .95rem;
@@ -1934,44 +1974,19 @@ i {
 
   & .panel {
     &-body {
-      & .table-header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 1rem 1.2rem;
-        padding-right: 2rem;
-        background-color: #f7f9fa;
-        border-radius: 1px;
-        font-size: 1.25rem;
-        font-weight: 500;
-        line-height: 1.28;
-        color: #647282;
+      & .table-header-fixed {
+       
+        & thead {
+          background-color: #f7f9fa;
+          //border-bottom: 1px solid #E6E8EB;
 
-        & .dropdown-custom {
-          &-trigger {
-            font-weight: 400;
-            color: inherit;
-            border: 0;
-            outline: 0;
-            padding: 0;
-
-            &:focus,
-            &:active {
-              box-shadow: none;
-              border: 0;
-            }
+          & tr {
+            padding: .15rem 1.25rem;
+            padding-right: 1.5rem;
             & i {
               font-size: .8rem;
-              margin-left: .3rem;
             }
           }
-        }
-      }
-      & .table-header-fixed {
-        //display: flex;
-        & thead {
-          border-bottom: 1px solid #E6E8EB;
-          padding-bottom: .2rem;
           
           & th {
             font-size: 1.2rem;
@@ -1982,18 +1997,36 @@ i {
             & i {
               margin-left: 0.6rem;
             }
+
+            & .dropdown-custom {
+              &-trigger {
+                display: inline-flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: .6rem;
+                & i:first-of-type {
+                  margin-top: -.1rem;
+                  font-size: 1.3rem;
+                  margin-left: .8rem;
+                }
+              }
+            }
           }
         }
 
         & tbody {
-          width: 100%;
           max-height: calc(100vh - 11rem - 16rem - 8rem);
           border-bottom: 1px solid #E6E8EB;
         }
 
+        // & tr {
+        //   //padding: 0 1.7rem;
+        // }
+
         & tbody {
           & tr {
             padding: .6rem 0;
+            padding-left: .8rem;
             border-bottom: 1px solid #ededf5;
 
             &:last-child {
@@ -2005,41 +2038,35 @@ i {
         & td,
         & th {
 
-          &.table-header-fixed-col-1 {
-            flex: .7!important;
+          &:nth-of-type(1) {
+            flex: .76!important;
 
             @include respond(desktop-xsm) {
               flex: 1!important;
             }
           }
 
-          &.table-header-fixed-col-2 {
+          &:nth-of-type(2) {
             flex: .485!important;
             @include respond(desktop-xxsm) {
               display: none;
             }
           }
 
-          &.table-header-fixed-col-3 {
+          &:nth-of-type(3) {
             flex: .565!important;
             @include respond(desktop-xsm) {
               display: none;
             }
           }
 
-          &.table-header-fixed-col-4 {
+          &:nth-of-type(4) {
             flex: .1!important;
           }
         }
 
-        & td {
-          &.table-header-fixed-col-1 {
-          & a {
-            display: flex;
-            align-items: center;
-          }
+        &-col-1 {
           & img {
-            margin-left: .9rem;
             margin-right: 1.5rem;
             width: 4.1rem;
             height: 4.1rem;
@@ -2060,13 +2087,13 @@ i {
           }
         }
 
-        &.table-header-fixed-col-2 {
+        &-col-2 {
           font-size: 1.4rem;
           line-height: 1.36;
           color: #1b2733;
         }
 
-        &.table-header-fixed-col-3 {
+        &-col-3 {
           & .btn-custom-table {
             padding: .6rem 1.8rem;
             font-size: 1.4rem;
@@ -2076,10 +2103,9 @@ i {
           }
         }
 
-        &.table-header-fixed-col-4 {
+        &-col-4 {
           font-size: 1.3rem;
           color: #647282;
-        }
         }
       }
     }
@@ -2864,47 +2890,49 @@ i {
       }
   
       &-header {
-        padding: 2.2rem;
+        //margin-bottom: .4rem;
+        padding: 1.9rem 2.29rem; 
         display: flex;
         align-items: center;
         border-bottom: none;
         margin-bottom: 2rem;
+
         & img {
-          margin-right: 1.1rem;
-          width: 5.3rem;
-          height: 5.3rem;
+          margin-right: 1.19rem;
+          width: 5.32rem;
+          height: 5.32rem;
           border-radius: 50%;
         }
   
         & h5 {
-          //margin-bottom: rem;
+          margin-top: -.2rem;
           font-size: 1.2rem;
           font-weight: 500;
-          line-height: 1.22;
-          letter-spacing: 0.07px;
+          line-height: 1.17;
           color: #007aff;
           text-transform: uppercase;
   
           & .name {
-            margin-top: .5rem;
+            margin-bottom: -.5rem;
             display: block;
-            font-size: 2.15rem;
+            font-size: 2.3rem;
             font-weight: 700;
-            line-height: 1.08;
-            letter-spacing: 0.26px;
+            line-height: 1.22;
+            letter-spacing: 0.23px;
             color: #000000;
             text-transform: capitalize;
           }
         }
   
         & .close {
-          font-size: 2rem;
+          font-size: 1.6rem;
           align-self: flex-start;
         }
       }
   
       &-body {
         padding: 2rem;
+        padding-top: 1.4rem;
         padding-bottom: 6rem;
         display: flex;
         flex-direction: column;
@@ -2916,10 +2944,12 @@ i {
           text-align: center;
   
           & p {
+            //margin-left: .2rem;
+            margin-right: .45rem;
             margin-bottom: .5rem;
-            font-size: 1.9rem;
+            font-size: 1.85rem;
             font-weight: 500;
-            line-height: 1.32;
+            line-height: 1.3;
             color: #000000;
           }
   
@@ -2935,10 +2965,10 @@ i {
   
           & label {
             display: block;
-            font-size: 1.3rem;
-            font-weight: 700;
-            line-height: 1.38;
-            letter-spacing: 0.13px;
+            font-size: 1.35rem;
+            font-weight: 500;
+            line-height: 1.33;
+            letter-spacing: 0.2px;
             color: #2d2d2d;
           }
   
@@ -2967,8 +2997,8 @@ i {
         }
   
         & .btn-custom-primary {
-          padding: .5em 2.2em;
-          margin-top: 3.2rem;
+          padding: .5em 2.3em;
+          margin-top: 4.1rem;
           font-size: 1.6rem;
           font-weight: 500;
           line-height: 1.31;
