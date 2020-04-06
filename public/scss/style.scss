@@ -383,7 +383,7 @@ i {
 }
 
 .page-content {
-  padding: 3.4rem 3.2rem 0 4.1rem;
+  padding: 3.4rem 0 0 4.1rem;
   width: calc(100% - 8.8rem);
   height: 100%;
 
@@ -1114,8 +1114,15 @@ i {
 // HEADER START
 // ==================================
 .header {
-  padding-bottom: .5rem;
+  padding-right: 3.2rem;
+  //padding-bottom: .5rem;
   font-size: 1.6rem;
+
+  // &::after {
+  //   content: "";
+  //   display: block;
+  //   border-bottom: 1px solid #e1e1e1;
+  // }
 
   &-top {
     display: flex;
@@ -1273,7 +1280,7 @@ i {
   &-bottom {
     display: flex;
     align-items: center;
-    padding: 4.5rem 0 .6rem;
+    padding: 4.5rem 0 1.1rem;
 
     & .choose {
       display: flex;
@@ -1327,13 +1334,28 @@ i {
 // AVERAGE CHARTS START
 // ==================================
 .teams-average-charts {
+  position: relative;
   width: 100%;
-  max-width: 103rem;
-  padding-top: 3.5rem;
-  border-top: 1px solid #e1e1e1;
   z-index: 100;
   max-height: calc(100vh - 17.1rem - 1.5px);
   z-index: 0;
+  //max-width: 103rem;
+  padding-right: calc(100% - 103rem);
+
+  &::before {
+    content: '';
+    display: block;
+    position: sticky;
+    top: 0;
+    left: 0;
+    max-width: 103rem;
+    border-top: 1px solid #e1e1e1;
+  }
+
+  &~header {
+    background-color: red!important;
+  }
+
 
     overflow-y: auto;
     scrollbar-width: none; /* Firefox */
@@ -1346,6 +1368,7 @@ i {
     }
 
   &-body {
+    padding-top: 3.5rem;
 
     & .section {
       position: relative;
@@ -1726,19 +1749,30 @@ i {
 // ==================================
 .teams-comments {
   padding:2.5rem 0;
-  padding-top: 3.45rem;
+  padding-top: 0;
   padding-bottom: 0;
-  border-top: 1px solid #e1e1e1;
-  max-width: 103rem;
+  //max-width: 103rem;
+
+  &::before {
+    content: '';
+    display: block;
+    position: sticky;
+    top: 0;
+    left: 0;
+    max-width: 103rem;
+    border-top: 1px solid #e1e1e1;
+  }
+  
 
   & .section-comments {
+    padding-top: 3.45rem;
 
     &-header {
+      max-width: 103rem;
       display: flex;
       justify-content: space-between;
       align-items: center;
       padding: 1rem 1.2rem;
-      padding-right: 1.5rem;
       background-color: #f7f9fa;
       border-radius: 1px;
       font-size: 1.25rem;
@@ -1774,6 +1808,7 @@ i {
       grid-template-columns: repeat(3, 1fr);
       grid-gap: 2.6rem 2.6rem;
       max-height: calc(100vh - 23.95rem - .9rem - 1px);
+      padding-right: calc(100% - 103rem);
 
       overflow-y: auto;
       scrollbar-width: none; /* Firefox */
@@ -1853,6 +1888,7 @@ i {
   padding:2.5rem 0;
   border-top: 1px solid #e1e1e1;
   max-width: 79.9rem;
+  
 
   &-header {
     margin-bottom: 3rem;
@@ -2174,6 +2210,7 @@ i {
   border-top: 1px solid #e1e1e1;
   max-width: 72rem;
   padding-top: 2.6rem;
+  //padding-right: calc(100% - 72rem);
 
   &-header {
     margin-bottom: 3rem;
@@ -2273,10 +2310,11 @@ i {
 .teams-settings-feedback {
   padding:2.5rem 0;
   padding-bottom: 0;
-  padding-top: 2.6rem;
-  max-width: 80.5rem;
+  padding-top: 0;
+  //max-width: 80.5rem;
   // max-height: calc(100vh - 9rem);
-  border-top: 1px solid #e1e1e1;
+  //border-top: 1px solid #e1e1e1;
+  padding-right: calc(100% - 80.5rem);
 
   overflow-y: auto;
   scrollbar-width: none; /* Firefox */
@@ -2288,8 +2326,19 @@ i {
     height: 0;
   }
 
+  &::before {
+    content: '';
+    display: block;
+    position: sticky;
+    top: 0;
+    left: 0;
+    max-width: 80.5rem;
+    border-top: 1px solid #e1e1e1;
+  }
+
 
   &-header {
+    padding-top: 2.6rem;
     margin-bottom: 4.8rem;
   }
 
@@ -2510,9 +2559,10 @@ i {
 .teams-settings-rights {
   padding:2.5rem 0;
   padding-bottom: 0;
-  padding-top: 2.6rem;
-  max-width: 80.5rem;
-  border-top: 1px solid #e1e1e1;
+  padding-top: 0;
+  //max-width: 80.5rem;
+  //border-top: 1px solid #e1e1e1;
+  padding-right: calc(100%  -  80.5rem);
 
   overflow-y: auto;
   scrollbar-width: none; /* Firefox */
@@ -2523,8 +2573,19 @@ i {
     height: 0;
   }
 
+  &::before {
+    content: '';
+    display: block;
+    position: sticky;
+    top: 0;
+    left: 0;
+    max-width: 80.5rem;
+    border-top: 1px solid #e1e1e1;
+  }
+
 
   &-header {
+    padding-top: 2.6rem;
     margin-bottom: 3.5rem;
   }
 
@@ -2693,7 +2754,8 @@ i {
 .give-feedback {
   padding:2.5rem 0;
   padding-bottom: 0;
-  max-width: 79rem;
+  //max-width: 79rem;
+  
 
   &-people {
     margin-top: 2.2rem;
@@ -2768,6 +2830,7 @@ i {
       grid-template-columns: repeat(auto-fit, minmax(7.5rem, 1fr));
       grid-gap: 2rem 3rem;
       max-height: calc(100vh - 36.3rem);
+      padding-right: calc(100% - 79rem);
 
       overflow-y: auto;
       scrollbar-width: none; /* Firefox */
@@ -2949,25 +3012,36 @@ i {
 // SINGLE USER GENERAL START
 // ==================================
 .single-user {
-  width: 100%;
-  max-width: 103rem;
+  //width: 100%;
+  //max-width: 103rem;
+  //border-top: 1px solid #e1e1e1;
   padding:2.5rem 0;
-  border-top: 1px solid #e1e1e1;
-  z-index: 100;
+  padding-top: 0;
   max-height: calc(100vh - 20rem);
-  z-index: 0;
+  padding-right: calc(100% - 103rem);
 
-    overflow-y: auto;
-    scrollbar-width: none; /* Firefox */
-    -ms-overflow-style: none; /* Internet Explorer 10+ */
+  overflow-y: auto;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
 
-    &::-webkit-scrollbar {
-      /* WebKit */
-      width: 0;
-      height: 0;
-    }
+  &::-webkit-scrollbar {
+    /* WebKit */
+    width: 0;
+    height: 0;
+  }
+
+  &::before {
+    content: '';
+    display: block;
+    position: sticky;
+    top: 0;
+    left: 0;
+    max-width: 103rem;
+    border-top: 1px solid #e1e1e1;
+  }
 
   &-header {
+    padding-top: 2.5rem;
     margin-bottom: 2rem;
     display: flex;
     justify-content: space-between;
@@ -3359,14 +3433,24 @@ i {
 // ==================================
 .single-user-feedback {
   width: 100%;
-  max-width: 103rem;
-  padding:2.5rem 0;
-  border-top: 1px solid #e1e1e1;
-  z-index: 100;
-  max-height: calc(100vh - 20rem);
-  z-index: 0;
+  //max-width: 103rem;
+  //border-top: 1px solid #e1e1e1;
+  //max-height: calc(100vh - 20rem);
+
+  &::before {
+    content: '';
+    display: block;
+    position: sticky;
+    top: 0;
+    left: 0;
+    max-width: 103rem;
+    border-top: 1px solid #e1e1e1;
+  }
+  
 
   &-header {
+    padding-top: 2.5rem;
+    max-width: 103rem;
     margin-bottom: 2rem;
     display: flex;
     justify-content: space-between;
@@ -3442,6 +3526,7 @@ i {
     & .section-comments {
 
       &-header {
+        max-width: 103rem;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -3481,10 +3566,11 @@ i {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         grid-gap: 2.6rem 2.6rem;
-        max-height: calc(100vh - 33rem);
+        max-height: calc(100vh - 31rem - 1.5px);
+        padding-right: calc(100% - 103rem);
 
         @include respond(desktop-sm) {
-          max-height: calc(100vh - 36rem);
+          max-height: calc(100vh - 35rem - 1.5px);
         }
   
         overflow-y: auto;
